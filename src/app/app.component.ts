@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
+import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,11 @@ import { UserComponent } from './user/user.component';
 })
 export class AppComponent {
   
+  users = DUMMY_USERS;
+
+  onSelecteUser(id:string){
+    console.log("Selected user with id"+ id);
+  }
+
 }
+
