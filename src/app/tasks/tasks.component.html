@@ -6,7 +6,8 @@
     </menu>
   </header>
   <ul>
-    @for ( task of selectedUserTasks; track task.id) {
+    <!-- Single user can have several tasks assigned so loop is required. Angular will track that list with that 'track' keyword-->
+    @for ( task of selectedUserTasks; track task.id) {            
     <li>
       <app-task [task]="task" />
     </li>
