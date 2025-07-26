@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  @Input({ required: true }) id!: string;
+  @Input({ required: true }) id!: string;  
   @Input({ required: true }) avatar!: string; // Older way instead of signals. accepts input data from the parent component
   @Input({ required: true }) name!: string;
   @Output() select = new EventEmitter<string>();  //creates a EveneEmitter object, outputs a value from the componen. 
