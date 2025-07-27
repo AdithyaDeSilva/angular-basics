@@ -1,5 +1,5 @@
 @if (isAddingTask) {
-  <app-new-task />
+<app-new-task (cancel)="onCancelAddTask()" />
 }
 <section id="tasks">
   <header>
@@ -10,7 +10,7 @@
   </header>
   <ul>
     <!-- Single user can have several tasks assigned so loop is required. Angular will track that list with that 'track' keyword-->
-    @for ( task of selectedUserTasks; track task.id) {            
+    @for ( task of selectedUserTasks; track task.id) {
     <li>
       <app-task [task]="task" (complete)="onCompleteTask($event)" />
     </li>
