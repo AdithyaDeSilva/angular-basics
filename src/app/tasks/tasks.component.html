@@ -2,14 +2,14 @@
   <header>
     <h2>{{ name }}'s Tasks</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="">Add Task</button>
     </menu>
   </header>
   <ul>
     <!-- Single user can have several tasks assigned so loop is required. Angular will track that list with that 'track' keyword-->
     @for ( task of selectedUserTasks; track task.id) {            
     <li>
-      <app-task [task]="task" />
+      <app-task [task]="task" (complete)="onCompleteTask($event)" />
     </li>
     }
   </ul>
